@@ -4,37 +4,21 @@
   "private": true,
   "homepage": "https://rodanman.github.io/exportify1",
   "dependencies": {
-    "@bugsnag/js": "^7.17.0",
-    "@bugsnag/plugin-react": "^7.17.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.3",
-    "@types/file-saver": "^2.0.1",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^18.0.15",
-    "@types/react-bootstrap": "^0.32.24",
-    "@types/react-dom": "^18.0.6",
-    "axios": "^0.21.0",
-    "bootstrap": "^4.5.3",
-    "bottleneck": "^2.19.5",
-    "eslint-plugin-jest-dom": "^3.6.3",
-    "eslint-plugin-testing-library": "^5.5.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.2",
     "file-saver": "^2.0.2",
-    "jszip": "^3.10.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^1.6.1",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "stream": "^0.0.2",
-    "typescript": "^4.0.3",
-    "url-search-params-polyfill": "^8.1.0",
-    "web-vitals": "^0.2.4"
+    "gh-pages": "^3.1.0",
+    "jspdf": "^2.3.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.1",
+    "typescript": "^4.1.2"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -47,9 +31,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "plugin:testing-library/react",
-      "plugin:jest-dom/recommended"
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -65,11 +47,6 @@
     ]
   },
   "devDependencies": {
-    "msw": "^0.21.3",
-    "react-test-renderer": "^18.2.0",
-    "sass": "^1.53.0"
-  },
-  "resolutions": {
-    "autoprefixer": "10.4.5"
+    "eslint-config-react-app": "^6.0.0"
   }
 }
