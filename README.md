@@ -14,7 +14,7 @@ As many users have noted, there is no way to export/archive/backup playlists fro
 ## Usage
 
 1. Fire up [the app](https://watsonbox.github.io/exportify/)
-2. Click 'Get Started' you know
+2. Click 'Get Started' you know ya know
 3. Grant Exportify read-only access to your playlists
 4. Click the 'Export' button to export a playlist
 
