@@ -73,3 +73,5 @@
     "autoprefixer": "10.4.5"
   }
 }
+    "@types/react-datepicker": "^4.3.0",
+
