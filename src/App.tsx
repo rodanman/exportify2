@@ -1,16 +1,31 @@
 import './App.scss'
 import "./icons"
-
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "url-search-params-polyfill"
-
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import Login from 'components/Login'
 import PlaylistTable from "components/PlaylistTable"
 import { getQueryParam } from "helpers"
 import Logout from "components/Logout"
 
 function App() {
+  const [startDate, setStartDate] = useState(new Date())
+  const [endDate, setEndDate] = useState(new Date())
+
+  const handleStartDateChange = (date) => {
+    setStartDate(date)
+  }
+
+  const handleEndDateChange = (date) => {
+    setEndDate(date)
+  }
+
+  const exportFilteredTracks = () => {
+    // Logic to filter and export tracks based on selected date range
+  }
+
   let view
   let key = new URLSearchParams(window.location.hash.substring(1))
 
@@ -39,9 +54,23 @@ function App() {
         </p>
       </header>
 
+      <div>
+        <h2>Select Date Range</h2>
+        <div>
+          <label>Start Date: </label>
+          <DatePicker selected={startDate} onChange={handleStartDateChange} />
+        </div>
+        <div>
+          <label>End Date: </label>
+          <DatePicker selected={endDate} onChange={handleEndDateChange} />
+        </div>
+        <button onClick={exportFilteredTracks}>Export Tracks</button>
+      </div>
+
       {view}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
