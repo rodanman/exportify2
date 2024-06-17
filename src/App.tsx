@@ -14,11 +14,11 @@ function App() {
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
 
-  const handleStartDateChange = (date) => {
+  const handleStartDateChange = (date: Date) => {
     setStartDate(date)
   }
 
-  const handleEndDateChange = (date) => {
+  const handleEndDateChange = (date: Date) => {
     setEndDate(date)
   }
 
@@ -45,6 +45,35 @@ function App() {
     <div className="App container">
       <header className="App-header">
         { key.has('access_token') && <Logout /> }
+        <h1>
+          <FontAwesomeIcon icon={['fab', 'spotify']} color="#84BD00" size="sm" /> <a href={process.env.PUBLIC_URL}>Exportify</a>
+        </h1>
+
+        <p id="subtitle" className="lead text-secondary">
+          Export your Spotify playlists.
+        </p>
+      </header>
+
+      <div>
+        <h2>Select Date Range</h2>
+        <div>
+          <label>Start Date: </label>
+          <DatePicker selected={startDate} onChange={handleStartDateChange} />
+        </div>
+        <div>
+          <label>End Date: </label>
+          <DatePicker selected={endDate} onChange={handleEndDateChange} />
+        </div>
+        <button onClick={exportFilteredTracks}>Export Tracks</button>
+      </div>
+
+      {view}
+    </div>
+  )
+}
+
+export default App
+
         <h1>
           <FontAwesomeIcon icon={['fab', 'spotify']} color="#84BD00" size="sm" /> <a href={process.env.PUBLIC_URL}>Exportify</a>
         </h1>
