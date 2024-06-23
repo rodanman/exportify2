@@ -30,6 +30,8 @@ jobs:
         git config --global user.name "Your Name"
 
     - name: Deploy to GitHub Pages
-      run: npm run deploy
+      run: |
+        git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
